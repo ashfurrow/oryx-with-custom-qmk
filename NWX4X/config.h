@@ -15,3 +15,5 @@
 #define RGB_MATRIX_STARTUP_SPD 60
 
 #define QUICK_TAP_TERM_PER_KEY
+
+#define RGB_MATRIX_DEFAULT_ON false // Disables animations when board first boots.
