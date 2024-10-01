@@ -233,3 +233,14 @@ tap_dance_action_t tap_dance_actions[] = {
         [DANCE_9] = ACTION_TAP_DANCE_TAP_HOLD(KC_C, LGUI(KC_C)),
         [DANCE_10] = ACTION_TAP_DANCE_TAP_HOLD(KC_V, LGUI(KC_V)),
 };
+
+// https://docs.qmk.fm/tap_hold#quick-tap-term
+uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        // Apply "Tapping Force Hold" (aka "Quick Tap Term") for these keys.
+        case LT(2,KC_SPACE):
+            return 0;
+        default:
+            return QUICK_TAP_TERM;
+    }
+}
